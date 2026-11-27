@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='utf-8'?>
+<quiz>
+  <question type="multichoice">
+    <name>
+      <text>QB-MC-V09-FEEDBACK</text>
+    </name>
+    <questiontext format="plain_text">
+      <text>Welche Zahlen sind gerade?</text>
+    </questiontext>
+    <defaultgrade>5</defaultgrade>
+    <penalty>0</penalty>
+    <single>false</single>
+    <shuffleanswers>1</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="plain_text">
+      <text>MC-V09: vollständig richtig</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="plain_text">
+      <text>MC-V09: nicht vollständig richtig</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="plain_text">
+      <text>MC-V09: nicht vollständig richtig</text>
+    </incorrectfeedback>
+    <answer fraction="20" format="plain_text">
+      <text>2</text>
+    </answer>
+    <answer fraction="-20" format="plain_text">
+      <text>3</text>
+    </answer>
+    <answer fraction="-20" format="plain_text">
+      <text>5</text>
+    </answer>
+    <answer fraction="80" format="plain_text">
+      <text>6</text>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>QB-SC-V09-FEEDBACK</text>
+    </name>
+    <questiontext format="plain_text">
+      <text>Welche Zahl ist gerade?</text>
+    </questiontext>
+    <defaultgrade>4</defaultgrade>
+    <penalty>0</penalty>
+    <single>true</single>
+    <shuffleanswers>1</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="plain_text">
+      <text>Rückmeldung bei richtiger Lösung</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="plain_text">
+      <text>Rückmeldung bei nicht vollständig richtiger Lösung</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="plain_text">
+      <text>Rückmeldung bei nicht vollständig richtiger Lösung</text>
+    </incorrectfeedback>
+    <answer fraction="25" format="plain_text">
+      <text>2</text>
+      <feedback format="plain_text">
+        <text>Teilpunkte</text>
+      </feedback>
+    </answer>
+    <answer fraction="-25" format="plain_text">
+      <text>3</text>
+      <feedback format="plain_text">
+        <text>falsche Antwort</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="plain_text">
+      <text>4</text>
+      <feedback format="plain_text">
+        <text>volle Punktzahl</text>
+      </feedback>
+    </answer>
+  </question>
+</quiz>

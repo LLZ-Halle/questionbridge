@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='utf-8'?>
+<quiz>
+  <question type="multichoice">
+    <name>
+      <text>QB-MC-004</text>
+    </name>
+    <questiontext format="plain_text">
+      <text>Welche Zahlen sind gerade?</text>
+    </questiontext>
+    <defaultgrade>5</defaultgrade>
+    <penalty>0</penalty>
+    <single>false</single>
+    <shuffleanswers>1</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="20" format="plain_text">
+      <text>2</text>
+    </answer>
+    <answer fraction="-20" format="plain_text">
+      <text>3</text>
+      <feedback format="plain_text">
+        <text>zieht einen Punkt ab</text>
+      </feedback>
+    </answer>
+    <answer fraction="-20" format="plain_text">
+      <text>5</text>
+    </answer>
+    <answer fraction="80" format="plain_text">
+      <text>6</text>
+      <feedback format="plain_text">
+        <text>gibt vier Punkte</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>QB-MC-001</text>
+    </name>
+    <questiontext format="plain_text">
+      <text>Welche Zahl ist gerade?</text>
+    </questiontext>
+    <defaultgrade>4</defaultgrade>
+    <penalty>0</penalty>
+    <single>true</single>
+    <shuffleanswers>1</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="25" format="plain_text">
+      <text>2</text>
+      <feedback format="plain_text">
+        <text>Teilpunkte</text>
+      </feedback>
+    </answer>
+    <answer fraction="-25" format="plain_text">
+      <text>3</text>
+      <feedback format="plain_text">
+        <text>falsche Antwort</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="plain_text">
+      <text>4</text>
+      <feedback format="plain_text">
+        <text>volle Punktzahl</text>
+      </feedback>
+    </answer>
+  </question>
+</quiz>

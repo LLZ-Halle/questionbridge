@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<quiz>
+  <question type="cloze">
+    <name>
+      <text>QB-CLOZE-V012-GEMISCHT</text>
+    </name>
+    <questiontext format="html">
+      <text>Fülle die Lücken!&lt;br&gt;Die Hauptstadt von Italien ist {2:SHORTANSWER:=Rom}. Der Himmel ist bei klarem Wetter {1:MULTICHOICE_S:=blau~grün~rot}. Wasser siedet bei Normaldruck bei {3:NUMERICAL:=100:2} Grad Celsius.</text>
+    </questiontext>
+    <defaultgrade>6</defaultgrade>
+    <penalty>0</penalty>
+  </question>
+</quiz>

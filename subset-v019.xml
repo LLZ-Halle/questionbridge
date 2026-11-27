@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<quiz>
+  <question type="cloze">
+    <name>
+      <text>QB-SUBSET-V019-GLEICH</text>
+    </name>
+    <questiontext format="html">
+      <text>Nenne zwei europäische Hauptstädte.&lt;br&gt;{2:SHORTANSWER:=Berlin~=Paris~=Rom}&lt;br&gt;{2:SHORTANSWER:=Berlin~=Paris~=Rom}</text>
+    </questiontext>
+    <defaultgrade>4</defaultgrade>
+    <penalty>0</penalty>
+  </question>
+</quiz>

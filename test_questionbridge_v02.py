@@ -1,0 +1,117 @@
+from pathlib import Path
+import subprocess
+import sys
+import tempfile
+import unittest
+import xml.etree.ElementTree as ET
+from decimal import Decimal
+
+ROOT = Path(__file__).resolve().parent
+CONVERTER = ROOT / "questionbridge_v02.py"
+SC = ROOT / "1795182081__0__qti_329.xml"
+MC = ROOT / "1795425389__0__qti_329.xml"
+
+
+class QuestionBridgeV02Tests(unittest.TestCase):
+    def setUp(self):
+        temp = tempfile.TemporaryDirectory()
+        self.addCleanup(temp.cleanup)
+        self.work = Path(temp.name)
+        self.output = self.work / "moodle.xml"
+
+    def convert(self, source):
+        return subprocess.run(
+            [sys.executable, str(CONVERTER), str(source), str(self.output)],
+            capture_output=True,
+            text=True,
+            cwd=ROOT,
+        )
+
+    def check_question(self, source, title, single, points, fractions):
+        result = self.convert(source)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+
+        questions = ET.parse(self.output).getroot().findall("question")
+        self.assertEqual(len(questions), 1)
+        question = questions[0]
+        self.assertEqual(question.get("type"), "multichoice")
+        self.assertEqual(question.findtext("name/text"), title)
+        self.assertEqual(question.findtext("single"), single)
+        self.assertEqual(Decimal(question.findtext("defaultgrade")), points)
+        self.assertEqual(question.findtext("shuffleanswers"), "1")
+        self.assertEqual(Decimal(question.findtext("penalty")), 0)
+
+        answers = question.findall("answer")
+        self.assertEqual(len(answers), len(fractions))
+        self.assertEqual(
+            {answer.findtext("text"): Decimal(answer.attrib["fraction"])
+             for answer in answers},
+            fractions,
+        )
+
+    def test_single_choice(self):
+        self.check_question(
+            SC, "QB-SC-001", "true", 1, {"3": 0, "4": 100, "5": 0}
+        )
+
+    def test_multiple_choice(self):
+        self.check_question(
+            MC, "QB-MC-001", "false", 2, {"3": 0, "4": 50, "5": 0, "6": 50}
+        )
+
+    def test_mixed_pool(self):
+        source = ROOT / "1795432100__0__qti_329.xml"
+        result = self.convert(source)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+
+        questions = ET.parse(self.output).getroot().findall("question")
+        self.assertEqual(len(questions), 2)
+        by_title = {q.findtext("name/text"): q for q in questions}
+        expected = {
+            "QB-SC-001": ("true", 1, {"3": 0, "4": 100, "5": 0}),
+            "QB-MC-001": ("false", 2, {"3": 0, "4": 50, "5": 0, "6": 50}),
+        }
+        self.assertEqual(set(by_title), set(expected))
+
+        for title, (single, points, fractions) in expected.items():
+            with self.subTest(title=title):
+                question = by_title[title]
+                self.assertEqual(question.get("type"), "multichoice")
+                self.assertEqual(question.findtext("single"), single)
+                self.assertEqual(Decimal(question.findtext("defaultgrade")), points)
+                answers = question.findall("answer")
+                self.assertEqual(len(answers), len(fractions))
+                self.assertEqual(
+                    {a.findtext("text"): Decimal(a.attrib["fraction"]) for a in answers},
+                    fractions,
+                )
+
+    def test_rejects_points_for_non_selection(self):
+        tree = ET.parse(MC)
+
+        # Antwort-ID 0 ist „3“. Ändere nur ihre Nichtauswahl-Regel.
+        rules = [
+            rule for rule in tree.findall(".//resprocessing/respcondition")
+            if rule.findtext("conditionvar/not/varequal") == "0"
+        ]
+        self.assertEqual(len(rules), 1)
+        score = rules[0].find("setvar")
+        self.assertIsNotNone(score)
+        self.assertEqual(score.text.strip(), "0")
+        score.text = "1"
+
+        modified = self.work / "mc-punkte-fuer-nichtauswahl.xml"
+        tree.write(modified, encoding="utf-8", xml_declaration=True)
+
+        result = self.convert(modified)
+        message = result.stdout + result.stderr
+        self.assertNotEqual(result.returncode, 0, message)
+        self.assertIn(
+            "Punkte fuer Nichtauswahl werden noch nicht unterstuetzt.",
+            message,
+        )
+        self.assertFalse(self.output.exists(), "Unerwartete Moodle-XML erzeugt")
+
+
+if __name__ == "__main__":
+    unittest.main(verbosity=2)

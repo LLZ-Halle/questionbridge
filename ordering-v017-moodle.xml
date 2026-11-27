@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<quiz>
+  <question type="ordering">
+    <name>
+      <text>QB-ORDER-V017-REFEREN</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;Ordne die Planeten nach ihrem Abstand zur Sonne.&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text />
+    </generalfeedback>
+    <defaultgrade>4</defaultgrade>
+    <penalty>0</penalty>
+    <hidden>0</hidden>
+    <layouttype>VERTICAL</layouttype>
+    <selecttype>ALL</selecttype>
+    <selectcount>2</selectcount>
+    <gradingtype>ALL_OR_NOTHING</gradingtype>
+    <showgrading>SHOW</showgrading>
+    <numberingstyle>none</numberingstyle>
+    <correctfeedback format="html">
+      <text />
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text />
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text />
+    </incorrectfeedback>
+    <shownumcorrect>1</shownumcorrect>
+    <answer fraction="1" format="moodle_auto_format">
+      <text>Merkur</text>
+    </answer>
+    <answer fraction="2" format="moodle_auto_format">
+      <text>Venus</text>
+    </answer>
+    <answer fraction="3" format="moodle_auto_format">
+      <text>Erde</text>
+    </answer>
+    <answer fraction="4" format="moodle_auto_format">
+      <text>Mars</text>
+    </answer>
+  </question>
+</quiz>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- question: 3  -->
+  <question type="multichoice">
+    <name>
+      <text>QB-MC-001</text>
+    </name>
+    <questiontext format="plain_text">
+      <text>Welche Zahlen sind gerade?</text>
+    </questiontext>
+    <generalfeedback format="plain_text">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>2</defaultgrade>
+    <penalty>0</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="plain_text">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="plain_text">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="plain_text">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="plain_text">
+      <text>3</text>
+      <feedback format="plain_text">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="50" format="plain_text">
+      <text>4</text>
+      <feedback format="plain_text">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="plain_text">
+      <text>5</text>
+      <feedback format="plain_text">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="50" format="plain_text">
+      <text>6</text>
+      <feedback format="plain_text">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 1  -->
+  <question type="multichoice">
+    <name>
+      <text>QB-SC-001</text>
+    </name>
+    <questiontext format="plain_text">
+      <text>Welche Zahl ist gerade?</text>
+    </questiontext>
+    <generalfeedback format="plain_text">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="plain_text">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="plain_text">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="plain_text">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="plain_text">
+      <text>3</text>
+      <feedback format="plain_text">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="plain_text">
+      <text>4</text>
+      <feedback format="plain_text">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="plain_text">
+      <text>5</text>
+      <feedback format="plain_text">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 2  -->
+  <question type="multichoice">
+    <name>
+      <text>QB-SC-001</text>
+    </name>
+    <questiontext format="plain_text">
+      <text>Welche Zahl ist gerade?</text>
+    </questiontext>
+    <generalfeedback format="plain_text">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="plain_text">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="plain_text">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="plain_text">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="plain_text">
+      <text>3</text>
+      <feedback format="plain_text">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="plain_text">
+      <text>4</text>
+      <feedback format="plain_text">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="plain_text">
+      <text>5</text>
+      <feedback format="plain_text">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+</quiz>

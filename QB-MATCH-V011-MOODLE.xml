@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<quiz>
+  <question type="matching">
+    <name>
+      <text>QB-MATCH-V011-1ZU1</text>
+    </name>
+    <questiontext format="plain_text">
+      <text>Ordne zu!</text>
+    </questiontext>
+    <defaultgrade>6</defaultgrade>
+    <penalty>0</penalty>
+    <shuffleanswers>0</shuffleanswers>
+    <subquestion format="plain_text">
+      <text>Italy</text>
+      <answer>
+        <text>Rom</text>
+      </answer>
+    </subquestion>
+    <subquestion format="plain_text">
+      <text>Japan</text>
+      <answer>
+        <text>Tokio</text>
+      </answer>
+    </subquestion>
+    <subquestion format="plain_text">
+      <text>Ottawa</text>
+      <answer>
+        <text>Kanada</text>
+      </answer>
+    </subquestion>
+  </question>
+</quiz>

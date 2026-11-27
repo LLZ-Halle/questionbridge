@@ -1,0 +1,32 @@
+QuestionBridge 0.1 - eingeschraenkter Konverter-Prototyp
+
+Voraussetzung: Python 3.9 oder neuer. Keine Zusatzpakete erforderlich.
+
+Ausfuehren in Ubuntu:
+python3 questionbridge.py eingabe_qti.xml ausgabe_moodle.xml
+
+Unterstuetzte Eingabe: ILIAS-QTI wie die bereitgestellte Referenzdatei,
+assSingleChoice, einfacher Text, mindestens zwei Antworten, genau eine
+positive Bewertung, alle anderen Antworten null Punkte. Die Mischoption
+wird uebernommen. Existierende Zieldateien werden nicht ueberschrieben.
+
+Nicht unterstuetzt: ZIP, HTML, Medien, nichtleeres Antwortfeedback,
+Teilpunkte, negative Punkte und andere Fragetypen. Der Prototyp ist kein
+allgemeiner QTI-Validator. Andere unbekannte QTI-Erweiterungen sind noch
+nicht vollstaendig geprueft. Nur Kopien eigener Testexporte verwenden.
+Autor, ILIAS-interne IDs, Lebenszyklusstatus und sonstige ILIAS-Metadaten
+werden nicht nach Moodle uebertragen. Antwortnummerierung: abc.
+Moodle-Verhalten mit mehreren Versuchen/Abzuegen wird nicht aus ILIAS
+abgeleitet; penalty wird fuer diesen Test auf 0 gesetzt.
+
+Die beigefuegte Moodle-XML-Datei wurde aus der hochgeladenen Testfrage
+erzeugt. Import und Bewertung muessen noch im lokalen Moodle getestet werden.
+Es wurde noch kein Moodle-Import und kein Rueckimport nach ILIAS getestet.
+
+Automatisch geprueft:
+- Testfrage QB-SC-001: 3 Antworten, 4 ist korrekt, 1 Punkt.
+- single=true und shuffleanswers=1.
+- Multiple Choice, zwei positive Antworten und HTML-Text werden abgelehnt.
+
+Dies ist ein eigenstaendiges Entwicklungswerkzeug, noch kein installiertes
+ILIAS- oder Moodle-Plugin und nicht fuer produktive Pruefungen freigegeben.

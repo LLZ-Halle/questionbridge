@@ -1,0 +1,49 @@
+QuestionBridge – Teststand vom 20.11.2026
+
+ERFOLGREICH GETESTET
+ILIAS-QTI -> questionbridge.py -> Moodle-XML -> Moodle-Import
+
+Referenz:
+- Quelle: 1795182081__0__qti_329.xml
+- Fragentitel: QB-SC-001
+- Fragetyp: Single Choice / assSingleChoice
+- Fragetext: Welche Zahl ist gerade?
+- Antworten: 3, 4, 5
+- Antwort 4: richtig, 1 Punkt
+- Antworten 3 und 5: falsch, 0 Punkte
+- Darstellung und Bewertung in Moodle manuell geprueft.
+- Frisch erzeugter Konverterexport erfolgreich importiert.
+
+UMGEBUNG
+- Projekt: ~/questionbridge-dev
+- Prototyp: questionbridge-prototype/questionbridge.py
+- Moodle: http://localhost:8081
+- ILIAS: http://localhost:8080
+- Eigenstaendiger Python-Prototyp, noch kein installiertes Plugin.
+
+EINSCHRAENKUNGEN
+- Nur einfacher Text und eingeschraenkte Single-Choice-Struktur.
+- Genau eine positiv bewertete Antwort; alle anderen 0 Punkte.
+- Kein HTML, keine Medien, kein nichtleeres Antwortfeedback.
+- Keine Teilpunkte, negativen Punkte oder anderen Fragetypen.
+- Keine ZIP-Verarbeitung und kein Rueckimport nach ILIAS.
+- penalty wird bewusst auf 0 gesetzt.
+- Keine allgemeine QTI-Kompatibilitaet oder Produktionsfreigabe.
+
+SICHERUNG VOR DEM AUTOMATISCHEN IMPORTTEST
+- backups/moodle-funktioniert-20261120-162816
+- Enthalten: Moodle-SQL-Dump, Programmdateien und moodledata.
+- Archiv auf Lesbarkeit geprueft; Wiederherstellung nicht getestet.
+- Der danach importierte Konvertertest ist darin noch nicht enthalten.
+
+NAECHSTE WOCHE
+1. Automatisierte Regressionstests fuer den Referenzfall anlegen.
+2. Ablehnung nicht unterstuetzter Eingaben automatisiert pruefen.
+3. Git-Versionierung fuer den Prototyp einrichten; keine Geheimnisse,
+   Datenbanken oder Laufzeitdaten aufnehmen.
+4. Danach den naechsten unterstuetzten Fragetyp festlegen.
+
+OFFENE BETRIEBSPUNKTE
+- Regelmaessige Ausfuehrung von Moodle-Cron pruefen/einrichten.
+- ILIAS_AUTO_SETUP: letzten Wert pruefen; Abschaltung noch unbestaetigt.
+- Im Chat verwendete Testpasswoerter vor weiterer Nutzung ersetzen.

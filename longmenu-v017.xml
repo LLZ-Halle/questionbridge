@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<quiz>
+  <question type="cloze">
+    <name>
+      <text>QB-LONGMENU-V016-REFERENZ</text>
+    </name>
+    <questiontext format="html">
+      <text>Was sind die Hauptstädte? &lt;br&gt;Die Hauptstadt von Italien ist {2:MULTICHOICE:Mailand~Neapel~=Rom~Turin}. Die Hauptstadt von Japan ist {3:SHORTANSWER_C:=Tokio}.</text>
+    </questiontext>
+    <defaultgrade>5</defaultgrade>
+    <penalty>0</penalty>
+  </question>
+</quiz>

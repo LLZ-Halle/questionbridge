@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- question: 41  -->
+  <question type="kprime">
+    <name>
+      <text>QB-KPRIM-V015-MOODLE-REF</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Richtig oder falsch?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>4</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <scoringmethod><text>kprimeonezero</text>
+</scoringmethod>
+    <shuffleanswers>true</shuffleanswers>
+    <numberofrows>4</numberofrows>
+    <numberofcolumns>2</numberofcolumns>
+    <row number="1">
+      <optiontext format="html">
+        <text><![CDATA[<p>blau</p>]]></text>
+      </optiontext>
+      <feedbacktext format="html">
+        <text></text>
+      </feedbacktext>
+    </row>
+    <row number="2">
+      <optiontext format="html">
+        <text><![CDATA[<p>grün</p>]]></text>
+      </optiontext>
+      <feedbacktext format="html">
+        <text></text>
+      </feedbacktext>
+    </row>
+    <row number="3">
+      <optiontext format="html">
+        <text><![CDATA[<p>rot</p>]]></text>
+      </optiontext>
+      <feedbacktext format="html">
+        <text></text>
+      </feedbacktext>
+    </row>
+    <row number="4">
+      <optiontext format="html">
+        <text><![CDATA[<p>gelb</p>]]></text>
+      </optiontext>
+      <feedbacktext format="html">
+        <text></text>
+      </feedbacktext>
+    </row>
+    <column number="1">
+      <responsetext format="moodle_auto_format">
+        <text>True</text>
+      </responsetext>
+    </column>
+    <column number="2">
+      <responsetext format="moodle_auto_format">
+        <text>False</text>
+      </responsetext>
+    </column>
+    <weight rownumber="1" columnnumber="1">
+      <value>
+         0.000
+      </value>
+    </weight>
+    <weight rownumber="1" columnnumber="2">
+      <value>
+         1.000
+      </value>
+    </weight>
+    <weight rownumber="2" columnnumber="1">
+      <value>
+         1.000
+      </value>
+    </weight>
+    <weight rownumber="2" columnnumber="2">
+      <value>
+         0.000
+      </value>
+    </weight>
+    <weight rownumber="3" columnnumber="1">
+      <value>
+         0.000
+      </value>
+    </weight>
+    <weight rownumber="3" columnnumber="2">
+      <value>
+         1.000
+      </value>
+    </weight>
+    <weight rownumber="4" columnnumber="1">
+      <value>
+         1.000
+      </value>
+    </weight>
+    <weight rownumber="4" columnnumber="2">
+      <value>
+         0.000
+      </value>
+    </weight>
+  </question>
+
+</quiz>
